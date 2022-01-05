@@ -6,14 +6,12 @@
     </head>
     <body>
         <div class="wrapper">
-            <h1 id="content"></h1>
             <div id="time"></div>
         </div>
 
         <script type="text/javascript">
             setInterval(()=>{
                 const time = document.querySelector("#time");
-                const content = document.querySelector("#content");
                 let date = new Date();
                 let hours = date.getHours();
                 let minutes = date.getMinutes();
@@ -24,13 +22,7 @@
                 }
                 if(hours > 12){
                     day_night = "PM";
-                    hours = "0" + hours - 12;
-                }
-                if(day_night = "AM"){
-                    content.textContent = "Hello Good Morning Zen";
-                }
-                if(day_night = "PM"){
-                    content.textContent = "Hello Good Evening Zen";
+                    hours = hours - 12;
                 }
                 if(minutes < 10){
                     minutes = "0" + minutes;
