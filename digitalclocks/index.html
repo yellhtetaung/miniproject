@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Digital Clock</title>
+        <link href="./style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1 id="content"></h1>
+            <div id="time"></div>
+        </div>
+
+        <script type="text/javascript">
+            setInterval(()=>{
+                const time = document.querySelector("#time");
+                const content = document.querySelector("#content");
+                let date = new Date();
+                let hours = date.getHours();
+                let minutes = date.getMinutes();
+                let seconds = date.getSeconds();
+                let day_night = "AM";
+                if(hours < 10){
+                    hours = "0" + hours;
+                }
+                if(hours > 12){
+                    day_night = "PM";
+                    hours = "0" + hours - 12;
+                }
+                if(day_night = "AM"){
+                    content.textContent = "Hello Good Morning Zen";
+                }
+                if(day_night = "PM"){
+                    content.textContent = "Hello Good Evening Zen";
+                }
+                if(minutes < 10){
+                    minutes = "0" + minutes;
+                }
+                if(seconds < 10){
+                    seconds = "0" + seconds;
+                }
+                time.textContent = hours + " : " + minutes + " : " + seconds + " " + day_night;
+            })
+        </script>
+    </body>
+</html>
