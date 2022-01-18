@@ -5,33 +5,52 @@
         <link href="./style.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <div class="wrapper">
-            <div id="time"></div>
+        <div class="container">
+            <h1 id="caption"></h1>
+            <div id="dateYear"></div>
+            <div id="dateDay"></div>
         </div>
 
         <script type="text/javascript">
-            setInterval(()=>{
-                const time = document.querySelector("#time");
+            setInterval(() => {
+                let dateDay = document.querySelector("#dateDay");
+                let dateYear = document.getElementById("dateYear");
+                let caption = document.querySelector("#caption");
                 let date = new Date();
-                let hours = date.getHours();
-                let minutes = date.getMinutes();
-                let seconds = date.getSeconds();
-                let day_night = "AM";
-                if(hours < 10){
-                    hours = "0" + hours;
-                }
-                if(hours > 12){
-                    day_night = "PM";
-                    hours = hours - 12;
-                }
-                if(minutes < 10){
-                    minutes = "0" + minutes;
-                }
-                if(seconds < 10){
-                    seconds = "0" + seconds;
-                }
-                time.textContent = hours + " : " + minutes + " : " + seconds + " " + day_night;
-            })
+                let year = date.getFullYear();
+                let month = date.getMonth();
+                let day = date.getDate();
+                let dayname = date.getDay();
+                let hour = date.getHours();
+                let minute = date.getMinutes();
+                let second = date.getSeconds();
+                let DayNight = "AM";
+
+                let dayname1 = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+                let month1 = ["Jan", "Feb", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                
+                if(hour === 0){
+                    hour = 12;
+                };
+                if(hour > 12){
+                    hour = hour -12;
+                    DayNight = "PM";
+                    caption.textContent = "Good Evening Zen";
+                }else{
+                    caption.textContent = "Good Morning Zen";
+                };
+                if(hour < 10){
+                    hour = "0" + hour;
+                };
+                if(minute < 10){
+                    minute = "0" + minute;
+                };
+                if(second < 10){
+                    second = "0" + second;
+                };
+                dateDay.textContent = hour + " : " + minute + " : " + second + " " + DayNight;
+                dateYear.textContent = day + " " + dayname1[dayname] + " / " + month1[month] + " / " + year;
+            });
         </script>
     </body>
 </html>

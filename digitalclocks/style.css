@@ -8,24 +8,67 @@ body{
     font-size: 40px;
     height: 100vh;
     background-color: #222;
-    color: #fff;
+    color: #ff0000;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    animation: textColor 5s linear infinite;
+}
+@keyframes textColor {
+    0%{
+        color: #ff0000;
+    }
+    10%{
+        color: #ff0000;
+    }
+    20%{
+        color: #ffbb00;
+    }
+    30%{
+        color: #15ff00;
+    }
+    40%{
+        color: #00ffa2;
+    }
+    50%{
+        color: #00d5ff;
+    }
+    60%{
+        color: #0022ff;
+    }
+    70%{
+        color: #8000ff;
+    }
+    80%{
+        color: #ee00ff;
+    }
+    90%{
+        color: #ff0099;
+    }
+    100%{
+        color: #ff0022;
+    }
 }
 h1{
-    color: #f4f4f4;
-    font-size: 30px;
-    font-style: italic;
+    color: #ff0000;
+    font-size: 40px;
     font-weight: 500;
-    letter-spacing: 5px;
+    letter-spacing: 7px;
+
+    animation: textColor 5s linear infinite;
 }
-.wrapper{
-    border-radius: 10px;
+.container{
+    border: 3px solid #00d5ff;
+    border-radius: 20px;
+
+    padding: 20px 30px;
 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent,rgba(255,255,255,0.2));
 }
