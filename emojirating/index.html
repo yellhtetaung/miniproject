@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Rating</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="./style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="emoji">
+            <div id="emoji">
+                <img src="./img/poor.png" alt="poor"/>
+                <img src="./img/bad.png" alt="poor"/>
+                <img src="./img/okay.png" alt="poor"/>
+                <img src="./img/good.png" alt="poor"/>
+                <img src="./img/excellent.png" alt="poor"/>
+            </div>
+        </div>
+        <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+    </div>
+
+    <script>
+        var stars = document.getElementsByClassName("fas");
+        var emoji = document.getElementById("emoji");
+
+        stars[0].onclick = function(){
+            stars[0].style.color = "#ffd93b";
+            stars[1].style.color = "#e4e4e4";
+            stars[2].style.color = "#e4e4e4";
+            stars[3].style.color = "#e4e4e4";
+            stars[4].style.color = "#e4e4e4";
+            emoji.style.transform = "translateX(0px)";
+        }
+        stars[1].onclick = function(){
+            stars[0].style.color = "#ffd93b";
+            stars[1].style.color = "#ffd93b";
+            stars[2].style.color = "#e4e4e4";
+            stars[3].style.color = "#e4e4e4";
+            stars[4].style.color = "#e4e4e4";
+            emoji.style.transform = "translateX(-100px)";
+        }
+        stars[2].onclick = function(){
+            stars[0].style.color = "#ffd93b";
+            stars[1].style.color = "#ffd93b";
+            stars[2].style.color = "#ffd93b";
+            stars[3].style.color = "#e4e4e4";
+            stars[4].style.color = "#e4e4e4";
+            emoji.style.transform = "translateX(-200px)";
+        }
+        stars[3].onclick = function(){
+            stars[0].style.color = "#ffd93b";
+            stars[1].style.color = "#ffd93b";
+            stars[2].style.color = "#ffd93b";
+            stars[3].style.color = "#ffd93b";
+            stars[4].style.color = "#e4e4e4";
+            emoji.style.transform = "translateX(-300px)";
+        }
+        stars[4].onclick = function(){
+            stars[0].style.color = "#ffd93b";
+            stars[1].style.color = "#ffd93b";
+            stars[2].style.color = "#ffd93b";
+            stars[3].style.color = "#ffd93b";
+            stars[4].style.color = "#ffd93b";
+            emoji.style.transform = "translateX(-400px)";
+        }
+    </script>
+</body>
+</html>

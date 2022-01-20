@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Box</title>
+    <link href="./style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <a href="#" class="btn" id="btn" onclick="popupToggle()">Login</a>
+    <div id="popup">
+        <div class="content">
+            <h1>Login</h1>
+            <div class="inputBox">
+                <label for="email">Username or Email</label>
+                <input type="email" class="email" id="email" placeholder="username or email" required autocomplete="off"/>
+                <label for="password">Password</label>
+                <input type="password" name="password" class="password" id="password" placeholder="enter your password"/>
+                <button type="submit" >Login</button>
+            </div>
+            <div class="footer">
+                <span>Not Registered?</span>
+                <a href="#">Create an account</a>
+            </div>
+        </div>
+        <a class="close" onclick="popupToggle()"><img src="./img/close.png" alt="close"/></a>
+    </div>
+    <script>
+        function popupToggle(){
+            const popup = document.getElementById("popup");
+            const btn = document.getElementById("btn");
+            popup.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background: linear-gradient(to right, #c43e00, #ffc800);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: rgba(255,255,255,0.25);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+
+    padding: 20px 40px;
+}
+.btn:hover{
+    letter-spacing: 5px;
+    transition: all 0.5s;
+}
+.btn:active{
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.7);
+    transform: translateY(5px);
+}
+#popup{
+    width: 450px;
+    height: 500px;
+    background-color: #fff;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    border-radius: 30px;
+    
+    padding: 30px 40px;
+
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 100;
+
+    transition: all 0.5s;
+
+    /* visibility: hidden; */
+}
+#popup.active{
+    visibility: visible;
+    top: 50%;
+}
+#popup .content{
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+#popup .content h1{
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+
+    padding: 20px 0 30px 0;
+}
+#popup .content label{
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    padding: 20px 20px 10px 20px;
+}
+#popup .content input{
+    display: block;
+    width: 80%;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #303030;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 2px solid rgba(0,0,0,0.5);
+
+
+    padding-left: 10px;
+    margin-left: 20px;
+}
+#popup .content button{
+    font-size: 18px;
+    border: none;
+    background-color: #001478;
+    color: #fff;
+    box-shadow: 0 10px 6px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    cursor: pointer;
+
+    padding: 8px 20px;
+    margin-top: 20px;
+    margin-left: 50%;
+
+    transform: translateX(-50%);
+}
+#popup .content button:hover{
+    background-color: #00f7f7;
+    color: #000;
+}
+.footer{
+    width: 100%;
+
+    margin-top: 20%;
+}
+.footer span{
+    color: #303030;
+}
+.footer a{
+    color: #242423;
+}
+.close{
+    position: absolute;
+    top: 6%;
+    right: 8%;
+    cursor: pointer;
+}
+.close img{
+    width: 25px;
+}
