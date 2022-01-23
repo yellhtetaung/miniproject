@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    color: #fff;
+    height: 100vh;
+    background: linear-gradient(to right, #8d3795, #e70845);
+}
+#slidebar{
+    width: 300px;
+    height: 100%;
+    background: #222;
+    position: absolute;
+    left: -300px;
+}
+#slidebar ul li{
+    list-style: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+
+    padding: 20px 24px;
+}
+#slidebar ul li:nth-child(1){
+    margin-top: 30px;
+}
+#slidebar .close{
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 5%;
+    left: 80%;
+}
+#slidebar .toggle-btn{
+    position: absolute;
+    top: 30px;
+    left: 330px;
+}
+.toggle-btn .fa-bars{
+    font-size: 40px;
+    cursor: pointer;
+}
+.toggle-btn.active{
+    visibility: hidden;
+}
