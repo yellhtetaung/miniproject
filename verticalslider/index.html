@@ -12,11 +12,75 @@
 <body>
     <div class="container">
         <div class="left-slide">
-
-        </div>
-        <div class="right-slide">
             
+            <div style="background-color: #D3CEBE;">
+                <h1>Inosuke Hashibira</h1>
+                <p>The Beast Breathing</p>
+            </div>
+            <div style="background-color: #F5962D;">
+                <h1>Zenltsu Agatsuma</h1>
+                <p>The Thunder Breathing</p>
+            </div>
+            <div style="background-color: #F5B9BE;">
+                <h1>Nekuko Kamado</h1>
+                <p>Blood Demon Art</p>
+            </div>
+            <div style="background-color: #57BF9C;">
+                <h1>Tanjiro Kamado</h1>
+                <p>The Water and Sun Breathing </p>
+            </div>
+        </div>
+        
+        <div class="right-slide">
+            <div style="background-image: url('./img/Tanjirou_anime_design.png');"></div>
+            <div style="background-image: url('./img/Nezuko_anime_design.png');"></div>
+            <div style="background-image: url('./img/Zenitsu_anime_design.png');"></div>
+            <div style="background-image: url('./img/Inosuke_anime_design.png');"></div>
+        </div>
+
+        <div class="action-buttons">
+            <button class="down-button">
+                <i class="fas fa-arrow-down"></i>
+            </button>
+            <button class="up-button">
+                <i class="fa fa-arrow-up"></i>
+            </button>
         </div>
     </div>
+
+    <script type="text/javascript">
+        const sliderContainer = document.querySelector(".container");
+        const slideLeft = document.querySelector(".left-slide");
+        const slideRight = document.querySelector(".right-slide");
+        const upButton = document.querySelector(".up-button");
+        const downButton = document.querySelector(".down-button");
+        const slidesLength = slideRight.querySelectorAll('div').length
+
+        let activeSlideIndex = 0
+
+        slideLeft.style.top = `-${(slidesLength - 1) * 100}vh`
+
+        upButton.addEventListener('click', () => changeSlide('up'))
+        downButton.addEventListener('click', () => changeSlide('down'))
+
+        const changeSlide = (direction) => {
+            const sliderHeight = sliderContainer.clientHeight
+            if(direction === 'up'){
+                activeSlideIndex++
+                if(activeSlideIndex > slidesLength -1){
+                    activeSlideIndex = 0
+                }
+            } else if(direction === 'down'){
+                activeSlideIndex--
+                if(activeSlideIndex < 0){
+                    activeSlideIndex = slidesLength -1
+                }
+            }
+            slideRight.style.transform = `translateY(-${activeSlideIndex * sliderHeight}px)`
+            slideLeft.style.transform = `translateY(${activeSlideIndex * sliderHeight}px)`
+        }
+
+        
+    </script>
 </body>
 </html>
