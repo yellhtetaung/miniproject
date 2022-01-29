@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: hsl(217, 54%, 11%);
+    font-family: 'Outfit', sans-serif;
+    color: hsl(0, 0%, 100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container{
+    width: 20vw;
+    height: 70vh;
+    background-color:  hsl(216, 50%, 16%);
+    border-radius: 10px;
+}
+.container .row-1{
+    width: 85%;
+    height: 50%;
+    border-radius: 10px;
+    cursor: pointer;
+
+    margin: auto;
+    margin-top: 5.9%;
+
+    overflow: hidden;
+}
+.container .row-1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container .row-1:hover{
+    background: url('./images/icon-view.svg');
+    background-color: hsl(178, 100%, 50%,0.5);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.container .row-1:hover img{
+    opacity: 0.5;
+}
+.container .row-2{
+    width: 85%;
+    height: 30%;
+
+    margin: auto;
+    border-bottom: 1px solid hsl(215, 51%, 70%);
+}
+.container .row-2 h1{
+    font-size: 25px;
+    cursor: pointer;
+
+    margin: 8% 0;
+}
+.container .row-2 h1:hover{
+    color: hsl(178, 100%, 50%);
+}
+.container .row-2 p{
+    width: 95%;
+    font-size: 18px;
+    color: hsl(215, 51%, 70%);
+
+    margin: 8% 0;
+}
+.container .row-2 .col-1, .container .row-2 .col-2{
+    width: 50%;
+    height: 20%;
+    float: left;
+
+    display: flex;
+    align-items: center;
+}
+.container .row-2 .col-2{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.container .row-2 .col-1 span{
+    color: hsl(178, 100%, 50%);
+    margin-left: 5%;
+}
+.container .row-2 .col-2 span{
+    color: hsl(215, 51%, 70%);
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.container .row-3{
+    width: 85%;
+    height: 10%;
+    
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    margin: auto;
+}
+.container .row-3 img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+.container .row-3 p{
+    font-size: 16px;
+    color: hsl(215, 51%, 70%);
+
+    margin-left: 8%;
+}
+.container .row-3 p span{
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+.container .row-3 p span:hover{
+    color: hsl(178, 100%, 50%);
+}
+.attribution{
+    font-size: 13px;
+    margin-top: 2%;
+}
