@@ -1,0 +1,27 @@
+@media (min-width: 576px) { 
+    #main{
+        background-color: green;
+        height: 300px;
+    }
+}
+
+@media (min-width: 768px) {
+    #main{
+        background-color: blue;
+        height: 300px;
+    }
+}
+
+@media (min-width: 992px) {
+    #main{
+        background-color: yellow;
+        height: 300px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #main{
+        background-color: red;
+        height: 300px;
+    }
+}
