@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Staatliches&display=swap');
+
+body{
+    background-color: #e3e3e3;
+}
+#main{
+    position: relative;
+    top: 80px;
+}
+
+#logo-container{
+    position: relative;
+    top: -70px;
+}
+
+#profile-img{
+    background-color: dodgerblue;
+    border-radius: 50px;
+}
+
+#title{
+    font-family: 'Staatliches', cursive;
+}
+
+.line{
+    width: 100%;
+}
