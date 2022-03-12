@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Varela+Round&display=swap');
+
+#menu{
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#logo{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 40px;
+    letter-spacing: 0.1em;
+}
+
+#left-menu li, #right-menu li{
+    margin-right: 20px;
+}
+
+#left-menu li a, #right-menu li a{
+    font-family: "Abel", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.carousel-caption{
+    width: 500px;
+    height: 200px;
+    font-size: 40px;
+    text-align: left;
+
+    top: 25%;
+    left: 50%;
+}
+
+#slider-left{
+    background-image: url('../images/left_icon.png');
+    width: 50px;
+    height: 50px;
+
+}
+
+#slider-right{
+    background-image: url('../images/right_icon.png');
+    width: 50px;
+    height: 50px;
+}
