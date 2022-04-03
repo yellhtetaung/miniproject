@@ -21,18 +21,20 @@ body{
 
     transition: all 0.3s;
 
-    overflow: hidden;
-}
-.container .icon{
-    position: absolute;
-    top: 50%;
-    left: 30px;
-    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    cursor: pointer;
+    overflow: hidden;
 }
 .container .icon .search{
     font-size: 30px;
+    padding: 15px;
+    cursor: pointer;
+
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .container.active{
     width: 400px;
@@ -70,8 +72,8 @@ body{
     color: #8888;
 
     position: absolute;
-    top: 50%;
+    top: 55%;
     right: -20px;
 
-    transform: translate(-50%,-50%);
+    transform: translateY(-50%);
 }

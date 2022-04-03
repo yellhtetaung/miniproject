@@ -78,23 +78,29 @@ body{
 
     transition: all 0.5s;
 }
-.playerButtom .fa-play,.playerButtom .fa-pause{
+.playerButtom .fa-play{
     font-size: 30px;
     border-radius: 50%;
     background-color: #000;
     color: #fff;
 
-    padding: 15px;
+    padding: 16px 20px;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
 .playerButtom .fa-pause{
-    padding: 15px 20px;
+    font-size: 30px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+
+    padding: 16px 23px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
 .playerButtom .fa-play:hover,.playerButtom .fa-backward:hover,.playerButtom .fa-forward:hover{
     background-color: #fff;
     color: #000;
-    transition: all 0.5s;
 }
-.playerButtom .fa-play:active,.playerButtom .fa-backward:active,.playerButtom .fa-forward:active{
+.playerButtom .fa-play:active,.playerButtom .fa-pause:active,.playerButtom .fa-backward:active,.playerButtom .fa-forward:active{
     transform: translateY(5px);
+    transition: all 0.1s;
 }

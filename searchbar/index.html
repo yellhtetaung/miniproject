@@ -16,7 +16,7 @@
         </div>
         <div class="input">
             <input type="text" placeholder="Search" id="search"/>
-            <i class="clear fa fa-times"></i>
+            <a class="clear"><i class="fa fa-times"></i></a>
         </div>
     </div>
 
@@ -28,7 +28,7 @@
             document.querySelector(".container").classList.toggle('active');
         }
         clear.onclick = function(){
-            document.getElementById("search").value = "";
+            clear.parentElement.parentElement.classList.toggle('active');
         }
     </script>
 </body>

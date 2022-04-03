@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Advice generator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      color: #fff;
+      font-size: 11px;
+      text-align: center;
+      margin-top: 5vh;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      height: 100vh;
+      background-color: hsl(218, 23%, 16%);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .container {
+      width: 30vw;
+      height: 35vh;
+      background-color: hsl(217, 19%, 24%);
+      border-radius: 20px;
+      position: relative;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .caption{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .caption h4 {
+      color: hsl(150, 100%, 66%);
+      text-transform: uppercase;
+      font-size: 0.9vw;
+      letter-spacing: 3px;
+
+      padding: 20px;
+    }
+
+    .caption p {
+      color: hsl(193, 38%, 86%);
+      font-size: 1.5vw;
+      font-weight: 800;
+      text-align: center;
+
+      padding: 0px 50px;
+    }
+    .container .divider{
+      padding: 35px 20px;
+    }
+    .divider img{
+      width: 100%;
+    }
+    .container .btn{
+      background-color: hsl(150, 100%, 66%);
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+
+      padding: 15px;
+
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translate(-50%,100%);
+    }
+    .container .btn.active{
+      box-shadow: 0 0 30px hsl(150, 100%, 66%);
+    }
+    @media (max-width: 375px) {
+      .container{
+        width: 90vw;
+      }
+      .caption h4{
+        font-size: 3vw;
+      }
+      .caption p{
+        font-size: 5vw;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="caption">
+      <h4>Advice #117</h4>
+
+      <p>
+        "It is easy to sit up and take notice, what's difficult is getting up and taking action."
+      </p>
+    </div>
+
+    <div class="divider">
+      <img src="./images/pattern-divider-desktop.svg" id="mobileView" alt=""/>
+    </div>
+    <button class="btn"><img src="./images/icon-dice.svg"/></button>
+    
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Yell Htet Aung</a>.
+  </div>
+
+
+  <script type="text/javascript">
+    const btn = document.querySelector(".btn");
+    var mobileView = document.getElementById('mobileView');
+    btn.addEventListener("mouseup", ()=>{
+      btn.classList.toggle("active")
+    })
+    if(window.innerWidth === 375){
+      mobileView.src = "./images/pattern-divider-mobile.svg";
+      console.log('work')
+    }
+
+  </script>
+</body>
+
+</html>
