@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+</head>
+<body>
+    <form action="" method="">
+        <div class="input">
+            <div>
+                <label for="firstnumber">
+                    <ul>
+                        <li>F</li>
+                        <li>i</li>
+                        <li>r</li>
+                        <li>s</li>
+                        <li>t</li>
+                        <li>N</li>
+                        <li>u</li>
+                        <li>m</li>
+                        <li>b</li>
+                        <li>e</li>
+                        <li>r</li>
+                    </ul>
+                </label>
+                <input type="text" name="firstnumber" id="firstnumber" class="firstinput" autocomplete="off">
+            </div>
+            <div>
+                <label for="secondnumber">
+                    <ul>
+                        <li>S</li>
+                        <li>e</li>
+                        <li>c</li>
+                        <li>o</li>
+                        <li>n</li>
+                        <li>d</li>
+                        <li>N</li>
+                        <li>u</li>
+                        <li>m</li>
+                        <li>b</li>
+                        <li>e</li>
+                        <li>r</li>
+                    </ul>
+                </label>
+                <input type="text" name="secondnumber" id="secondnumber" class="secondinput" autocomplete="off">
+            </div>
+        </div>
+        <div class="signs">
+            <button type="button" id="add" class="" onclick="sign('+')">+</button>
+            <button type="button" id="sub" class="" onclick="sign('-')">-</button>
+            <button type="button" id="multi" class="" onclick="sign('*')">*</button>
+            <button type="button" id="dev" class="" onclick="sign('/')">/</button>
+            <button type="button" id="mod" class="" onclick="sign('%')">%</button>
+
+        </div>
+        <div class="cal">
+            <button type="button" id="calc" class="calc" onclick="calculation()">Calculate</button>
+        </div>
+        <div class="display">
+            <input type="hidden" name="tempsign" id="tempsign" class="" autocomplete="off"/>
+            <input type="text" name="result" id="result" class="result" autocomplete="off"/>
+        </div>
+
+    </form>
+
+    <div class="caption" id="caption">
+        <h1>Error!!!</h1>
+        <p>You did not selected Sign</p>
+        <button type="submit" id="sumbit" class="sumbit" onclick="alertclose()">Try Again</button>
+    </div>
+
+
+    <script src="app.js" type="text/javascript"></script>
+
+
+</body>
+</html>
